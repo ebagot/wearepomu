@@ -73,7 +73,7 @@
 <body class="bg-black text-white mt-0" data-bs-spy="scroll" data-bs-target="#navScroll">
   <main>
     <div class="container text-center">
-      <img src="images/ban.png" alt="">
+      <img src="images/ban.png" alt="Ban" id="reloadImage">
     </div>
     <div class="w-100 overflow-hidden position-relative bg-black text-white" data-aos="fade">
       <div class="position-absolute w-100 h-100 bg-black opacity-75 top-0 start-0"></div>
@@ -90,7 +90,8 @@
               reveal which V-tuber you resonate with most.</p>
           </div>
           <div class="col-12 text-center py-vh-1">
-            <button class="btn btn-primary btn-xl btn-light" id="takethetest" data-bs-toggle="collapse" data-bs-target=".step1">Take the test
+            <button class="btn btn-primary btn-xl btn-light" id="takethetest" data-bs-toggle="collapse"
+              data-bs-target=".step1">Take the test
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                 class="bi bi-arrow-right" viewBox="0 0 16 16">
                 <path fill-rule="evenodd"
@@ -113,7 +114,7 @@
                 placeholder="Let our AI learn more about you..."></textarea>
             </div>
             <div class="py-vh-2">
-              <button type="submit" class="btn btn-primary btn-xl btn-light" id="result">Submit</button>
+              <button type="submit" class="btn btn-primary btn-xl btn-light" id="result" disabled>Submit</button>
             </div>
             <p class="mt-3 text-muted">Note: Please avoid sharing overly personal or sensitive information.</p>
           </form>
@@ -121,15 +122,20 @@
       </div>
       <div class="container position-relative mt-5 px-vw-5 text-center collapse" id="slide3">
         <div class="row d-flex align-items-center justify-content-center">
-          <div class="col-12 col-xl-10">
+          <div class="col-12 col-xl-8">
+            <p class="lead text-secondary">Oh well, anyway...</p>
+          </div>
+          <div class="col-12 col-xl-10 py-vh-2">
             <h1 class="display-huge mt-3 mb-3 lh-1">You are Pomu !</h1>
+          </div>
+          <div class="col-12 col-xl-10 py-vh-2">
             <img src="images/pomu.png" alt="" srcset="">
           </div>
-          <div class="col-12 col-xl-8 py-vh-1">
+          <div class="col-12 col-xl-8 py-vh-2">
             <p class="lead text-secondary">You don't need an AI to know that !</p>
           </div>
-          <div class="col-12 text-center py-vh-1">
-            <a href="#" class="btn btn-xl btn-light">#WeArePomu
+          <div class="col-12 text-center py-vh-2">
+            <a href="https://www.youtube.com/channel/UCP4nMSTdwU1KqYWu3UH5DHQ" class="btn btn-xl btn-light">#WeArePomu
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                 class="bi bi-arrow-right" viewBox="0 0 16 16">
                 <path fill-rule="evenodd"
@@ -148,33 +154,37 @@
       });
     </script>
     <script>
-      // document.addEventListener('DOMContentLoaded', function () {
-      //   // Handle the 'Take the Test' click
-      //   document.getElementById('takethetest').addEventListener('click', function () {
-      //     document.getElementById('slide1').classList.add('collapse');
-      //     setTimeout(() => {
-      //       document.getElementById('slide2').classList.remove('collapse');
-      //     }, 500);
-      //   });
+      document.addEventListener('DOMContentLoaded', function () {
+        //   // Handle the 'Take the Test' click
+        //   document.getElementById('takethetest').addEventListener('click', function () {
+        //     document.getElementById('slide1').classList.add('collapse');
+        //     setTimeout(() => {
+        //       document.getElementById('slide2').classList.remove('collapse');
+        //     }, 500);
+        //   });
 
-      //   // Handle the textarea input
-      //   document.getElementById('description').addEventListener('input', function () {
-      //     if (this.value.length >= 3) {
-      //       document.getElementById('slide2').classList.add('collapse');
-      //       setTimeout(() => {
-      //         document.getElementById('slide3').classList.remove('collapse');
-      //       }, 500);
-      //     }
-      //   });
+        // Handle the textarea input
+        document.getElementById('description').addEventListener('input', function () {
+          if (this.value.length >= 3) {
+            document.getElementById('slide2').classList.remove('show');
+            setTimeout(() => {
+              document.getElementById('slide3').classList.remove('collapse');
+            }, 100);
+          }
+        });
 
-      //   // Handle the 'Show Result' button click
-      //   document.getElementById('result').addEventListener('click', function () {
-      //     document.getElementById('slide2').classList.add('collapse');
-      //     setTimeout(() => {
-      //       document.getElementById('slide3').classList.remove('collapse');
-      //     }, 500);
-      //   });
-      // });
+        document.getElementById('reloadImage').addEventListener('click', () => {
+          location.reload();
+        });
+
+        //   // Handle the 'Show Result' button click
+        //   document.getElementById('result').addEventListener('click', function () {
+        //     document.getElementById('slide2').classList.add('collapse');
+        //     setTimeout(() => {
+        //       document.getElementById('slide3').classList.remove('collapse');
+        //     }, 500);
+        //   });
+      });
 
     </script>
 
