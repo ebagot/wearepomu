@@ -4,12 +4,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
-  <meta name="description" content="A well made and handcrafted Bootstrap 5 template">
+  <meta name="description" content="Which VTuber are you ?">
   <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
   <link rel="icon" type="image/png" sizes="96x96" href="img/favicon.png">
-  <meta name="author" content="Holger Koenemann">
+  <meta name="author" content="Theme : Holger Koenemann - Silly things : Nemo">
   <meta name="generator" content="Eleventy v2.0.0">
   <meta name="HandheldFriendly" content="true">
   <title>Which VTuber are you ?</title>
@@ -73,7 +73,7 @@
 <body class="bg-black text-white mt-0" data-bs-spy="scroll" data-bs-target="#navScroll">
   <main>
     <div class="container text-center">
-      <img src="images/ban.png" alt="Ban" id="reloadImage">
+      <img src="images/ban.png" alt="Ban" id="reloadImage" class="img-fluid">
     </div>
     <div class="w-100 overflow-hidden position-relative bg-black text-white" data-aos="fade">
       <div class="position-absolute w-100 h-100 bg-black opacity-75 top-0 start-0"></div>
@@ -129,7 +129,7 @@
             <h1 class="display-huge mt-3 mb-3 lh-1">You are Pomu !</h1>
           </div>
           <div class="col-12 col-xl-10 py-vh-2">
-            <img src="images/pomu.png" alt="" srcset="">
+            <img src="images/pomu.png" alt="" srcset="" class="img-fluid">
           </div>
           <div class="col-12 col-xl-8 py-vh-2">
             <p class="lead text-secondary">You don't need an AI to know that !</p>
@@ -155,14 +155,6 @@
     </script>
     <script>
       document.addEventListener('DOMContentLoaded', function () {
-        //   // Handle the 'Take the Test' click
-        //   document.getElementById('takethetest').addEventListener('click', function () {
-        //     document.getElementById('slide1').classList.add('collapse');
-        //     setTimeout(() => {
-        //       document.getElementById('slide2').classList.remove('collapse');
-        //     }, 500);
-        //   });
-
         // Handle the textarea input
         document.getElementById('description').addEventListener('input', function () {
           if (this.value.length >= 3) {
@@ -172,22 +164,13 @@
             }, 100);
           }
         });
-
+        //Handle reload image
         document.getElementById('reloadImage').addEventListener('click', () => {
           location.reload();
         });
 
-        //   // Handle the 'Show Result' button click
-        //   document.getElementById('result').addEventListener('click', function () {
-        //     document.getElementById('slide2').classList.add('collapse');
-        //     setTimeout(() => {
-        //       document.getElementById('slide3').classList.remove('collapse');
-        //     }, 500);
-        //   });
       });
-
     </script>
-
 </body>
 
 </html>
