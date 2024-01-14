@@ -1,0 +1,183 @@
+<!doctype html>
+<html class="h-100" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+  <meta name="description" content="A well made and handcrafted Bootstrap 5 template">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="img/favicon.png">
+  <meta name="author" content="Holger Koenemann">
+  <meta name="generator" content="Eleventy v2.0.0">
+  <meta name="HandheldFriendly" content="true">
+  <title>Which V-Tuber are you ?</title>
+  <link rel="stylesheet" href="css/theme.css">
+
+  <style>
+    /* inter-300 - latin */
+    @font-face {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 300;
+      font-display: swap;
+      src: local(''),
+        url('fonts/inter-v12-latin-300.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('fonts/inter-v12-latin-300.woff') format('woff');
+      /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    }
+
+    /* inter-400 - latin */
+    @font-face {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: local(''),
+        url('fonts/inter-v12-latin-regular.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('fonts/inter-v12-latin-regular.woff') format('woff');
+      /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    }
+
+    @font-face {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 500;
+      font-display: swap;
+      src: local(''),
+        url('fonts/inter-v12-latin-500.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('fonts/inter-v12-latin-500.woff') format('woff');
+      /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    }
+
+    @font-face {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 700;
+      font-display: swap;
+      src: local(''),
+        url('fonts/inter-v12-latin-700.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('fonts/inter-v12-latin-700.woff') format('woff');
+      /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    }
+  </style>
+
+
+</head>
+
+<body class="bg-black text-white mt-0" data-bs-spy="scroll" data-bs-target="#navScroll">
+  <main>
+    <div class="container text-center">
+      <img src="images/ban.png" alt="">
+    </div>
+    <div class="w-100 overflow-hidden position-relative bg-black text-white" data-aos="fade">
+      <div class="position-absolute w-100 h-100 bg-black opacity-75 top-0 start-0"></div>
+      <div class="container position-relative mt-5 px-vw-5 text-center step1 show" id="slide1">
+        <div class="row d-flex align-items-center justify-content-center">
+          <div class="col-12 col-xl-10">
+            <h1 class="display-huge mt-3 mb-3 lh-1">Which V-Tuber are you ?</h1>
+          </div>
+          <div class="col-12 col-xl-8 py-vh-1">
+            <p class="lead text-secondary">Have you ever wondered which V-tuber mirrors your unique
+              personality? It's time to find out! Our
+              cutting-edge AI-driven test is designed to delve into your preferences, interests, and
+              quirks to
+              reveal which V-tuber you resonate with most.</p>
+          </div>
+          <div class="col-12 text-center py-vh-1">
+            <button class="btn btn-primary btn-xl btn-light" id="takethetest" data-bs-toggle="collapse" data-bs-target=".step1">Take the test
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-arrow-right" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                  d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="container position-relative mt-5 px-vw-5 text-center collapse step1" id="slide2">
+        <div class="row d-flex align-items-center justify-content-center">
+          <form>
+            <h2 class="display-huge mt-3 mb-3 lh-1">Find Your V-Tuber Match !</h2>
+            <p class="lead text-secondary">Tell us about yourself in a few sentences to discover which V-Tuber you are.
+              Be
+              creative, but remember to respect your privacy.</p>
+            <div class="form-group">
+              <label for="description"></label>
+              <textarea class="form-control" id="description" rows="5"
+                placeholder="Let our AI learn more about you..."></textarea>
+            </div>
+            <div class="py-vh-2">
+              <button type="submit" class="btn btn-primary btn-xl btn-light" id="result">Submit</button>
+            </div>
+            <p class="mt-3 text-muted">Note: Please avoid sharing overly personal or sensitive information.</p>
+          </form>
+        </div>
+      </div>
+      <div class="container position-relative mt-5 px-vw-5 text-center collapse" id="slide3">
+        <div class="row d-flex align-items-center justify-content-center">
+          <div class="col-12 col-xl-10">
+            <h1 class="display-huge mt-3 mb-3 lh-1">You are Pomu !</h1>
+            <img src="images/pomu.png" alt="" srcset="">
+          </div>
+          <div class="col-12 col-xl-8 py-vh-1">
+            <p class="lead text-secondary">You don't need an AI to know that !</p>
+          </div>
+          <div class="col-12 text-center py-vh-1">
+            <a href="#" class="btn btn-xl btn-light">#WeArePomu
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-arrow-right" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                  d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 800, // values from 0 to 3000, with step 50ms
+      });
+    </script>
+    <script>
+      // document.addEventListener('DOMContentLoaded', function () {
+      //   // Handle the 'Take the Test' click
+      //   document.getElementById('takethetest').addEventListener('click', function () {
+      //     document.getElementById('slide1').classList.add('collapse');
+      //     setTimeout(() => {
+      //       document.getElementById('slide2').classList.remove('collapse');
+      //     }, 500);
+      //   });
+
+      //   // Handle the textarea input
+      //   document.getElementById('description').addEventListener('input', function () {
+      //     if (this.value.length >= 3) {
+      //       document.getElementById('slide2').classList.add('collapse');
+      //       setTimeout(() => {
+      //         document.getElementById('slide3').classList.remove('collapse');
+      //       }, 500);
+      //     }
+      //   });
+
+      //   // Handle the 'Show Result' button click
+      //   document.getElementById('result').addEventListener('click', function () {
+      //     document.getElementById('slide2').classList.add('collapse');
+      //     setTimeout(() => {
+      //       document.getElementById('slide3').classList.remove('collapse');
+      //     }, 500);
+      //   });
+      // });
+
+    </script>
+
+</body>
+
+</html>
